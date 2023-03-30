@@ -1,0 +1,24 @@
+project_structure:
+    build: build
+    contracts: contracts
+    interfaces: interfaces
+    reports: reports
+    scripts: scripts
+    tests: tests
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.7.0
+reports:
+  exclude_contracts:
+    - ERC721
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.7.0'
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
+networks:
+  default: goerli
+  goerli:
+      host: https://goerli.infura.io/v3/$WEB3_INFURA_PROJECT_ID
+
